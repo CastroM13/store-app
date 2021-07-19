@@ -1,0 +1,73 @@
+{
+  "name": "Users",
+  "fields": [
+    {
+      "fieldName": "idUser",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idAdresses",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idCards",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idOrders",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idWishlist",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "addresses",
+      "otherEntityRelationshipName": "idAdresses",
+      "relationshipName": "addresses"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "cards",
+      "otherEntityRelationshipName": "idCards",
+      "relationshipName": "cards"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "orders",
+      "otherEntityRelationshipName": "idOrders",
+      "relationshipName": "orders"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "wishlist",
+      "otherEntityRelationshipName": "idWishlist",
+      "relationshipName": "wishlist"
+    }
+  ],
+  "entityTableName": "users",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111542"
+}

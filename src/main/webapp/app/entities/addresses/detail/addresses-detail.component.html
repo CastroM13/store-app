@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="addresses">
+      <h2 data-cy="addressesDetailsHeading"><span jhiTranslate="storeApp.addresses.detail.title">Addresses</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ addresses.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.idAdresses">Id Adresses</span></dt>
+        <dd>
+          <span>{{ addresses.idAdresses }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.country">Country</span></dt>
+        <dd>
+          <span>{{ addresses.country }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.streetAddress">Street Address</span></dt>
+        <dd>
+          <span>{{ addresses.streetAddress }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.postalCode">Postal Code</span></dt>
+        <dd>
+          <span>{{ addresses.postalCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.city">City</span></dt>
+        <dd>
+          <span>{{ addresses.city }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.stateProvince">State Province</span></dt>
+        <dd>
+          <span>{{ addresses.stateProvince }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.addresses.idAdresses">Id Adresses</span></dt>
+        <dd>
+          <div *ngIf="addresses.idAdresses">
+            <a [routerLink]="['/users', addresses.idAdresses?.id, 'view']">{{ addresses.idAdresses?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/addresses', addresses.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="products">
+      <h2 data-cy="productsDetailsHeading"><span jhiTranslate="storeApp.products.detail.title">Products</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ products.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.products.idProducts">Id Products</span></dt>
+        <dd>
+          <span>{{ products.idProducts }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.products.name">Name</span></dt>
+        <dd>
+          <span>{{ products.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.products.value">Value</span></dt>
+        <dd>
+          <span>{{ products.value }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.products.image">Image</span></dt>
+        <dd>
+          <span>{{ products.image }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.products.description">Description</span></dt>
+        <dd>
+          <span>{{ products.description }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/products', products.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

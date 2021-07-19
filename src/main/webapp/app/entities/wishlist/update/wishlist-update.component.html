@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-wishlist-heading" data-cy="WishlistCreateUpdateHeading" jhiTranslate="storeApp.wishlist.home.createOrEditLabel">
+        Create or edit a Wishlist
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.wishlist.idWishlist" for="field_idWishlist">Id Wishlist</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idWishlist"
+            id="field_idWishlist"
+            data-cy="idWishlist"
+            formControlName="idWishlist"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.wishlist.idUser" for="field_idUser">Id User</label>
+          <input type="number" class="form-control" name="idUser" id="field_idUser" data-cy="idUser" formControlName="idUser" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.wishlist.idProducts" for="field_idProducts">Id Products</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idProducts"
+            id="field_idProducts"
+            data-cy="idProducts"
+            formControlName="idProducts"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.wishlist.idWishlist" for="field_idWishlist">Id Wishlist</label>
+          <select class="form-control" id="field_idWishlist" data-cy="idWishlist" name="idWishlist" formControlName="idWishlist">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="usersOption.id === editForm.get('idWishlist')!.value?.id ? editForm.get('idWishlist')!.value : usersOption"
+              *ngFor="let usersOption of usersSharedCollection; trackBy: trackUsersById"
+            >
+              {{ usersOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

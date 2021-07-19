@@ -1,0 +1,44 @@
+{
+  "name": "Products",
+  "fields": [
+    {
+      "fieldName": "idProducts",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "orderProducts",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "idProducts",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111547"
+}

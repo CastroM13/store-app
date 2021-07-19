@@ -1,0 +1,36 @@
+{
+  "storeApp": {
+    "users": {
+      "home": {
+        "title": "Users",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Users",
+        "createOrEditLabel": "Criar ou editar Users",
+        "search": "Pesquisar por Users",
+        "notFound": "Nenhum Users encontrado"
+      },
+      "created": "Um novo Users foi criado com o identificador {{ param }}",
+      "updated": "Um Users foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Users foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Users {{ id }}?"
+      },
+      "detail": {
+        "title": "Users"
+      },
+      "id": "ID",
+      "idUser": "Id User",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "idAdresses": "Id Adresses",
+      "idCards": "Id Cards",
+      "idOrders": "Id Orders",
+      "idWishlist": "Id Wishlist",
+      "addresses": "Addresses",
+      "cards": "Cards",
+      "orders": "Orders",
+      "wishlist": "Wishlist"
+    }
+  }
+}

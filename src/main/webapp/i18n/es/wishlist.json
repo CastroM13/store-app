@@ -1,0 +1,28 @@
+{
+  "storeApp": {
+    "wishlist": {
+      "home": {
+        "title": "Wishlists",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Wishlist",
+        "createOrEditLabel": "Crear o editar Wishlist",
+        "search": "Buscar Wishlist",
+        "notFound": "Ningún Wishlists encontrado"
+      },
+      "created": "Un nuevo Wishlist ha sido creado con el identificador {{ param }}",
+      "updated": "Un Wishlist ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Wishlist ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Wishlist {{ id }}?"
+      },
+      "detail": {
+        "title": "Wishlist"
+      },
+      "id": "ID",
+      "idWishlist": "Id Wishlist",
+      "idUser": "Id User",
+      "idProducts": "Id Products",
+      "idWishlist": "Id Wishlist"
+    }
+  }
+}

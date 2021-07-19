@@ -1,0 +1,119 @@
+<div>
+  <h2 id="page-heading" data-cy="AddressesHeading">
+    <span jhiTranslate="storeApp.addresses.home.title">Addresses</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="storeApp.addresses.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-addresses"
+        [routerLink]="['/addresses/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="storeApp.addresses.home.createLabel"> Create a new Addresses </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="searchForm" class="form-inline">
+        <div class="input-group w-100 mt-3">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="currentSearch"
+            id="currentSearch"
+            name="currentSearch"
+            placeholder="{{ 'storeApp.addresses.home.search' | translate }}"
+          />
+
+          <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+            <fa-icon icon="search"></fa-icon>
+          </button>
+
+          <button class="input-group-append btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+            <fa-icon icon="trash-alt"></fa-icon>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="addresses?.length === 0">
+    <span jhiTranslate="storeApp.addresses.home.notFound">No addresses found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="addresses && addresses.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.idAdresses">Id Adresses</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.country">Country</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.streetAddress">Street Address</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.postalCode">Postal Code</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.city">City</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.stateProvince">State Province</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.addresses.idAdresses">Id Adresses</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let addresses of addresses; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/addresses', addresses.id, 'view']">{{ addresses.id }}</a>
+          </td>
+          <td>{{ addresses.idAdresses }}</td>
+          <td>{{ addresses.country }}</td>
+          <td>{{ addresses.streetAddress }}</td>
+          <td>{{ addresses.postalCode }}</td>
+          <td>{{ addresses.city }}</td>
+          <td>{{ addresses.stateProvince }}</td>
+          <td>
+            <div *ngIf="addresses.idAdresses">
+              <a [routerLink]="['/users', addresses.idAdresses?.id, 'view']">{{ addresses.idAdresses?.id }}</a>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/addresses', addresses.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/addresses', addresses.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(addresses)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

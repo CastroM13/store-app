@@ -1,0 +1,51 @@
+{
+  "name": "Cards",
+  "fields": [
+    {
+      "fieldName": "idCards",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "identityDocument",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cardNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "securityCode",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "expirationDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cardholder",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "parcelQuantity",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "users",
+      "otherEntityRelationshipName": "cards",
+      "relationshipName": "idCards"
+    }
+  ],
+  "entityTableName": "cards",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111544"
+}

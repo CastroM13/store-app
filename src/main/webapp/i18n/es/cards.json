@@ -1,0 +1,32 @@
+{
+  "storeApp": {
+    "cards": {
+      "home": {
+        "title": "Cards",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Cards",
+        "createOrEditLabel": "Crear o editar Cards",
+        "search": "Buscar Cards",
+        "notFound": "Ningún Cards encontrado"
+      },
+      "created": "Un nuevo Cards ha sido creado con el identificador {{ param }}",
+      "updated": "Un Cards ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Cards ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Cards {{ id }}?"
+      },
+      "detail": {
+        "title": "Cards"
+      },
+      "id": "ID",
+      "idCards": "Id Cards",
+      "identityDocument": "Identity Document",
+      "cardNumber": "Card Number",
+      "securityCode": "Security Code",
+      "expirationDate": "Expiration Date",
+      "cardholder": "Cardholder",
+      "parcelQuantity": "Parcel Quantity",
+      "idCards": "Id Cards"
+    }
+  }
+}

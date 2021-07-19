@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="cards">
+      <h2 data-cy="cardsDetailsHeading"><span jhiTranslate="storeApp.cards.detail.title">Cards</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ cards.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.idCards">Id Cards</span></dt>
+        <dd>
+          <span>{{ cards.idCards }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.identityDocument">Identity Document</span></dt>
+        <dd>
+          <span>{{ cards.identityDocument }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.cardNumber">Card Number</span></dt>
+        <dd>
+          <span>{{ cards.cardNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.securityCode">Security Code</span></dt>
+        <dd>
+          <span>{{ cards.securityCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.expirationDate">Expiration Date</span></dt>
+        <dd>
+          <span>{{ cards.expirationDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.cardholder">Cardholder</span></dt>
+        <dd>
+          <span>{{ cards.cardholder }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.parcelQuantity">Parcel Quantity</span></dt>
+        <dd>
+          <span>{{ cards.parcelQuantity }}</span>
+        </dd>
+        <dt><span jhiTranslate="storeApp.cards.idCards">Id Cards</span></dt>
+        <dd>
+          <div *ngIf="cards.idCards">
+            <a [routerLink]="['/users', cards.idCards?.id, 'view']">{{ cards.idCards?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/cards', cards.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

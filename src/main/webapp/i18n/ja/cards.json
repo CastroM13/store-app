@@ -1,0 +1,32 @@
+{
+  "storeApp": {
+    "cards": {
+      "home": {
+        "title": "Cards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Cards を追加",
+        "createOrEditLabel": "Cardsを追加または編集",
+        "search": "Search for Cards",
+        "notFound": "No Cards found"
+      },
+      "created": "A new Cards is created with identifier {{ param }}",
+      "updated": "A Cards is updated with identifier {{ param }}",
+      "deleted": "A Cards is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Cards {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Cards"
+      },
+      "id": "ID",
+      "idCards": "Id Cards",
+      "identityDocument": "Identity Document",
+      "cardNumber": "Card Number",
+      "securityCode": "Security Code",
+      "expirationDate": "Expiration Date",
+      "cardholder": "Cardholder",
+      "parcelQuantity": "Parcel Quantity",
+      "idCards": "Id Cards"
+    }
+  }
+}
