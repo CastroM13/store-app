@@ -1,0 +1,29 @@
+{
+  "storeApp": {
+    "orderProducts": {
+      "home": {
+        "title": "Order Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Products",
+        "createOrEditLabel": "Create or edit a Order Products",
+        "search": "Search for Order Products",
+        "notFound": "No Order Products found"
+      },
+      "created": "A new Order Products is created with identifier {{ param }}",
+      "updated": "A Order Products is updated with identifier {{ param }}",
+      "deleted": "A Order Products is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Products {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Products"
+      },
+      "id": "ID",
+      "idOrderProducts": "Id Order Products",
+      "idOrder": "Id Order",
+      "idProduct": "Id Product",
+      "orders": "Orders",
+      "products": "Products"
+    }
+  }
+}

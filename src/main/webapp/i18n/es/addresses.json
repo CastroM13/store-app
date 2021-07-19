@@ -1,0 +1,31 @@
+{
+  "storeApp": {
+    "addresses": {
+      "home": {
+        "title": "Addresses",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Addresses",
+        "createOrEditLabel": "Crear o editar Addresses",
+        "search": "Buscar Addresses",
+        "notFound": "Ningún Addresses encontrado"
+      },
+      "created": "Un nuevo Addresses ha sido creado con el identificador {{ param }}",
+      "updated": "Un Addresses ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Addresses ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Addresses {{ id }}?"
+      },
+      "detail": {
+        "title": "Addresses"
+      },
+      "id": "ID",
+      "idAdresses": "Id Adresses",
+      "country": "Country",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "stateProvince": "State Province",
+      "idAdresses": "Id Adresses"
+    }
+  }
+}

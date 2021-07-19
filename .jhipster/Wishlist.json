@@ -1,0 +1,35 @@
+{
+  "name": "Wishlist",
+  "fields": [
+    {
+      "fieldName": "idWishlist",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idUser",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idProducts",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "users",
+      "otherEntityRelationshipName": "wishlist",
+      "relationshipName": "idWishlist"
+    }
+  ],
+  "entityTableName": "wishlist",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111548"
+}

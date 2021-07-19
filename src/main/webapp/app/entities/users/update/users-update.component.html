@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-users-heading" data-cy="UsersCreateUpdateHeading" jhiTranslate="storeApp.users.home.createOrEditLabel">
+        Create or edit a Users
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.idUser" for="field_idUser">Id User</label>
+          <input type="number" class="form-control" name="idUser" id="field_idUser" data-cy="idUser" formControlName="idUser" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.email" for="field_email">Email</label>
+          <input type="text" class="form-control" name="email" id="field_email" data-cy="email" formControlName="email" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.password" for="field_password">Password</label>
+          <input type="text" class="form-control" name="password" id="field_password" data-cy="password" formControlName="password" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.idAdresses" for="field_idAdresses">Id Adresses</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idAdresses"
+            id="field_idAdresses"
+            data-cy="idAdresses"
+            formControlName="idAdresses"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.idCards" for="field_idCards">Id Cards</label>
+          <input type="number" class="form-control" name="idCards" id="field_idCards" data-cy="idCards" formControlName="idCards" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.idOrders" for="field_idOrders">Id Orders</label>
+          <input type="number" class="form-control" name="idOrders" id="field_idOrders" data-cy="idOrders" formControlName="idOrders" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="storeApp.users.idWishlist" for="field_idWishlist">Id Wishlist</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idWishlist"
+            id="field_idWishlist"
+            data-cy="idWishlist"
+            formControlName="idWishlist"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

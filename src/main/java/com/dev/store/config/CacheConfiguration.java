@@ -51,6 +51,21 @@ public class CacheConfiguration {
             createCache(cm, com.dev.store.domain.User.class.getName());
             createCache(cm, com.dev.store.domain.Authority.class.getName());
             createCache(cm, com.dev.store.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.dev.store.domain.Users.class.getName());
+            createCache(cm, com.dev.store.domain.Users.class.getName() + ".addresses");
+            createCache(cm, com.dev.store.domain.Users.class.getName() + ".cards");
+            createCache(cm, com.dev.store.domain.Users.class.getName() + ".orders");
+            createCache(cm, com.dev.store.domain.Users.class.getName() + ".wishlists");
+            createCache(cm, com.dev.store.domain.Addresses.class.getName());
+            createCache(cm, com.dev.store.domain.Cards.class.getName());
+            createCache(cm, com.dev.store.domain.Orders.class.getName());
+            createCache(cm, com.dev.store.domain.Orders.class.getName() + ".idOrderProducts");
+            createCache(cm, com.dev.store.domain.OrderProducts.class.getName());
+            createCache(cm, com.dev.store.domain.OrderProducts.class.getName() + ".orders");
+            createCache(cm, com.dev.store.domain.OrderProducts.class.getName() + ".products");
+            createCache(cm, com.dev.store.domain.Products.class.getName());
+            createCache(cm, com.dev.store.domain.Products.class.getName() + ".idProducts");
+            createCache(cm, com.dev.store.domain.Wishlist.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

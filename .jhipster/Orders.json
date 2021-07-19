@@ -1,0 +1,42 @@
+{
+  "name": "Orders",
+  "fields": [
+    {
+      "fieldName": "idOrder",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idOrderProducts",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "users",
+      "otherEntityRelationshipName": "orders",
+      "relationshipName": "idOrders"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "orderProducts",
+      "otherEntityRelationshipName": "orders",
+      "relationshipName": "idOrderProducts",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "orders",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111545"
+}

@@ -1,0 +1,31 @@
+{
+  "storeApp": {
+    "addresses": {
+      "home": {
+        "title": "Addresses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Addresses を追加",
+        "createOrEditLabel": "Addressesを追加または編集",
+        "search": "Search for Addresses",
+        "notFound": "No Addresses found"
+      },
+      "created": "A new Addresses is created with identifier {{ param }}",
+      "updated": "A Addresses is updated with identifier {{ param }}",
+      "deleted": "A Addresses is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Addresses {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Addresses"
+      },
+      "id": "ID",
+      "idAdresses": "Id Adresses",
+      "country": "Country",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "stateProvince": "State Province",
+      "idAdresses": "Id Adresses"
+    }
+  }
+}

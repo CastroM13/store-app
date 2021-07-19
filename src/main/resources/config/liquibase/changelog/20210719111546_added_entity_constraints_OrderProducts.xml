@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity OrderProducts.
+    -->
+    <changeSet id="20210719111546-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="order_products_id"
+                                 baseTableName="rel_order_products__orders"
+                                 constraintName="fk_rel_order_products__orders__order_products_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_products"/>
+
+        <addForeignKeyConstraint baseColumnNames="orders_id"
+                                 baseTableName="rel_order_products__orders"
+                                 constraintName="fk_rel_order_products__orders__orders_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="orders"/>
+
+        <addForeignKeyConstraint baseColumnNames="order_products_id"
+                                 baseTableName="rel_order_products__products"
+                                 constraintName="fk_rel_order_products__products__order_products_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_products"/>
+
+        <addForeignKeyConstraint baseColumnNames="products_id"
+                                 baseTableName="rel_order_products__products"
+                                 constraintName="fk_rel_order_products__products__products_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="products"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,45 @@
+{
+  "name": "OrderProducts",
+  "fields": [
+    {
+      "fieldName": "idOrderProducts",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idOrder",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idProduct",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "orders",
+      "otherEntityRelationshipName": "idOrderProducts",
+      "relationshipName": "orders",
+      "otherEntityField": "idOrderProducts",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "idProducts",
+      "relationshipName": "products",
+      "otherEntityField": "idProducts",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "order_products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210719111546"
+}

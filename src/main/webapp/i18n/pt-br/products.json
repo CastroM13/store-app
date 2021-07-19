@@ -1,0 +1,30 @@
+{
+  "storeApp": {
+    "products": {
+      "home": {
+        "title": "Products",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Products",
+        "createOrEditLabel": "Criar ou editar Products",
+        "search": "Pesquisar por Products",
+        "notFound": "Nenhum Products encontrado"
+      },
+      "created": "Um novo Products foi criado com o identificador {{ param }}",
+      "updated": "Um Products foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Products foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Products {{ id }}?"
+      },
+      "detail": {
+        "title": "Products"
+      },
+      "id": "ID",
+      "idProducts": "Id Products",
+      "name": "Name",
+      "value": "Value",
+      "image": "Image",
+      "description": "Description",
+      "idProducts": "Id Products"
+    }
+  }
+}

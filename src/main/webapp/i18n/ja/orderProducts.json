@@ -1,0 +1,29 @@
+{
+  "storeApp": {
+    "orderProducts": {
+      "home": {
+        "title": "OrderProducts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Order Products を追加",
+        "createOrEditLabel": "Order Productsを追加または編集",
+        "search": "Search for Order Products",
+        "notFound": "No Order Products found"
+      },
+      "created": "A new Order Products is created with identifier {{ param }}",
+      "updated": "A Order Products is updated with identifier {{ param }}",
+      "deleted": "A Order Products is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Order Products {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Order Products"
+      },
+      "id": "ID",
+      "idOrderProducts": "Id Order Products",
+      "idOrder": "Id Order",
+      "idProduct": "Id Product",
+      "orders": "Orders",
+      "products": "Products"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "storeApp": {
+    "wishlist": {
+      "home": {
+        "title": "Wishlists",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Wishlist を追加",
+        "createOrEditLabel": "Wishlistを追加または編集",
+        "search": "Search for Wishlist",
+        "notFound": "No Wishlists found"
+      },
+      "created": "A new Wishlist is created with identifier {{ param }}",
+      "updated": "A Wishlist is updated with identifier {{ param }}",
+      "deleted": "A Wishlist is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Wishlist {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Wishlist"
+      },
+      "id": "ID",
+      "idWishlist": "Id Wishlist",
+      "idUser": "Id User",
+      "idProducts": "Id Products",
+      "idWishlist": "Id Wishlist"
+    }
+  }
+}
