@@ -1,0 +1,67 @@
+entity Users {
+	idUser Integer
+	name String
+    email String
+    password Password
+    idAdresses Integer
+    idCards Integer
+    idOrders Integer
+    idWishlist Integer
+}
+
+entity Addresses {
+    idAdresses Integer
+	country String
+	streetAddress String
+	postalCode String
+	city String
+	stateProvince String
+}
+
+entity Cards {
+	idCards Integer,
+	identityDocument String
+    cardNumber String
+    securityCode Integer
+    expirationDate String
+    cardholder String
+    parcelQuantity Integer
+}
+
+entity Orders {
+	idOrder Integer
+    idOrderProducts Integer
+    total Money
+}
+
+entity OrderProducts {
+	idOrderProducts Integer
+	idOrder Integer
+    idProduct Integer
+}
+
+entity Products {
+	idProducts Integer
+    name String
+    value Money
+    image String
+    description String
+}
+
+entity Wishlist {
+	idWishlist Integer
+	idUser Integer
+    idProducts Integer
+}
+
+relationship ManyToMany {
+  OrderProducts{orders(idOrderProducts)} to Orders{idOrderProducts}
+  OrderProducts{products(idProducts)} to Products{idProducts}
+}
+
+relationship OneToMany {
+	Users to Addresses{idAdresses}
+	Users to Cards{idCards}
+	Users to Orders{idOrders}
+	Users to Wishlist{idWishlist}
+}
